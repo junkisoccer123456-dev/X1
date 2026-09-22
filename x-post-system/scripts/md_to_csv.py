@@ -35,7 +35,10 @@ def parse(path):
     ):
         no, theme, body = block.group(1), block.group(2).strip(), block.group(3)
         body = re.split(r"(?m)^---\s*$", body)[0]          # 末尾の注意メモを除去
-        main, _, reply = body.partition("【リプ】")
+        # 【リプ】【リプ①】【リプ1】いずれの表記でも、最初のリプ以降を「リプ」列に入れる
+        parts = re.split(r"(?m)^【リプ", body, maxsplit=1)
+        main = parts[0]
+        reply = ("【リプ" + parts[1]) if len(parts) > 1 else ""
         rows.append({
             "No": no,
             "テーマ": theme,
