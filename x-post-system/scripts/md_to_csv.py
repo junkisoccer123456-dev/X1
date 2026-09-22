@@ -18,12 +18,26 @@ import csv, io, os, re, sys
 SEP = "━" * 18
 # 【リプ】【リプ①】【リプ1】【リプ2】などをすべて拾う
 REPLY_RE = re.compile(r"(?m)^【リプ([^】]*)】[ \t]*")
+# 【A｜数値・有益型】のようなパターン見出しを拾う
+PATTERN_RE = re.compile(r"(?m)^【([ABC])｜[^】]*】[ \t]*")
 
 FIELDS = [
     "No", "テーマ", "種別", "テキスト",
     "date", "account", "structure", "status", "post_url",
     "impressions", "likes", "bookmarks", "reposts", "profile_visits", "note",
 ]
+
+
+def split_patterns(body):
+    """A/B/Cパターンで書かれた投稿を [(種別, 本文), ...] に分ける。無ければ None。"""
+    marks = list(PATTERN_RE.finditer(body))
+    if not marks:
+        return None
+    out = []
+    for i, m in enumerate(marks):
+        end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
+        out.append(("パターン" + m.group(1), body[m.end(): end].strip()))
+    return out
 
 
 def split_replies(body):
@@ -69,6 +83,12 @@ def parse(path):
     ):
         no, theme, body = block.group(1), block.group(2).strip(), block.group(3)
         body = re.split(r"(?m)^---\s*$", body)[0]      # 末尾の注意メモを除去
+        patterns = split_patterns(body)
+        if patterns:
+            for label, ptext in patterns:
+                rows.append(dict(base, No=no, テーマ=theme, 種別=label, テキスト=ptext))
+            continue
+
         main, replies = split_replies(body)
 
         row = dict(base, No=no, テーマ=theme, 種別="本文", テキスト=main)
@@ -108,8 +128,8 @@ def main():
         w = csv.DictWriter(f, fieldnames=FIELDS)
         w.writeheader()
         w.writerows(rows)
-    posts = sum(1 for r in rows if r["種別"] == "本文")
-    print("投稿%d本 / %d行を書き出しました -> %s" % (posts, len(rows), dst))
+    posts = len({(r["structure"], r["No"]) for r in rows})
+    print("テーマ%d件 / %d行を書き出しました -> %s" % (posts, len(rows), dst))
 
 
 if __name__ == "__main__":
