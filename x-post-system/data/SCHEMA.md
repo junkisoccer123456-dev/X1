@@ -1,0 +1,24 @@
+# metrics.csv の列定義
+
+| 列名 | 意味 | 例 |
+|---|---|---|
+| `date` | 投稿日（YYYY-MM-DD） | 2026-09-22 |
+| `account` | アカウント名（accounts/のファイル名と一致させる） | kouta |
+| `structure` | 使った構文名（structures/のファイル名と一致させる） | ng3-seikai-teiji |
+| `theme` | 投稿テーマ（短く） | 副業初心者がやりがちなNG |
+| `output_file` | 元になった投稿ファイル | outputs/kouta/2026-09-22_xxx_03.md |
+| `post_url` | 実際の投稿URL | https://x.com/... |
+| `impressions` | インプレッション数 | 12000 |
+| `likes` | いいね数 | 180 |
+| `bookmarks` | ブックマーク（保存）数 | 40 |
+| `reposts` | リポスト数 | 12 |
+| `replies` | リプライ数 | 5 |
+| `profile_visits` | プロフィール遷移数 | 300 |
+| `follows` | 新規フォロー数 | 25 |
+| `note` | メモ（投稿時間帯・画像の有無など） | 朝7時／画像なし |
+
+## ルール
+- 1投稿＝1行。
+- 数値が不明な項目は空欄のままでよい（0と書かない）。
+- `account` と `structure` の表記ゆれは集計が壊れる原因になるので、必ずファイル名と揃える。
+- 列を増やす場合は末尾に追加する（途中に挿入しない）。
