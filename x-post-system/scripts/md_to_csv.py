@@ -2,9 +2,13 @@
 """投稿MarkdownをスプレッドシートにインポートできるCSVへ変換する。
 
 使い方:
+    # 1ファイル（同じ場所に .csv を書き出す）
     python3 scripts/md_to_csv.py outputs/tamura/2026-09-22_xxx_01.md
 
-同じ場所に .csv を書き出す。列は data/SCHEMA.md の成績記録と揃えてあるので、
+    # 複数ファイルを1つのCSVにまとめる
+    python3 scripts/md_to_csv.py outputs/tamura/a.md outputs/tamura/b.md -o まとめ.csv
+
+列は data/SCHEMA.md の成績記録と揃えてあるので、
 後から数値を書き足せばそのまま成績管理表になる。
 """
 import csv, io, os, re, sys
@@ -49,15 +53,25 @@ def parse(path):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("使い方: python3 scripts/md_to_csv.py <投稿ファイル.md>")
+    args = sys.argv[1:]
+    out = None
+    if "-o" in args:
+        i = args.index("-o")
+        out = args[i + 1]
+        args = args[:i] + args[i + 2:]
+    if not args:
+        print("使い方: python3 scripts/md_to_csv.py <投稿ファイル.md> [...] [-o 出力.csv]")
         sys.exit(1)
-    src = sys.argv[1]
-    rows = parse(src)
-    if not rows:
-        print("投稿が見つかりませんでした:", src)
-        sys.exit(1)
-    dst = os.path.splitext(src)[0] + ".csv"
+
+    rows = []
+    for src in args:
+        found = parse(src)
+        if not found:
+            print("投稿が見つかりませんでした:", src)
+            sys.exit(1)
+        rows.extend(found)
+
+    dst = out or (os.path.splitext(args[0])[0] + ".csv")
     # BOM付きUTF-8。Excelでもスプレッドシートでも文字化けしない
     with io.open(dst, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
