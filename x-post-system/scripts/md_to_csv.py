@@ -128,7 +128,7 @@ def main():
         w = csv.DictWriter(f, fieldnames=FIELDS)
         w.writeheader()
         w.writerows(rows)
-    posts = len({(r["structure"], r["No"]) for r in rows})
+    posts = len({(r["structure"], r["No"], r["テーマ"]) for r in rows})
     print("テーマ%d件 / %d行を書き出しました -> %s" % (posts, len(rows), dst))
 
 
