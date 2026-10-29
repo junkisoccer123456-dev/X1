@@ -17,7 +17,7 @@ import csv, io, os, re, sys
 
 SEP = "━" * 18
 # 【リプ】【リプ①】【リプ1】【リプ2】などをすべて拾う
-REPLY_RE = re.compile(r"(?m)^【リプ([^】]*)】[ \t]*")
+REPLY_RE = re.compile(r"(?m)^【(リプ[^】]*|画像)】[ \t]*")
 # 【A｜数値・有益型】のようなパターン見出しを拾う
 PATTERN_RE = re.compile(r"(?m)^【([ABC])｜[^】]*】[ \t]*")
 
@@ -49,7 +49,11 @@ def split_replies(body):
     replies = []
     for i, m in enumerate(marks):
         end = marks[i + 1].start() if i + 1 < len(marks) else len(body)
-        label = "リプ" + (m.group(1).strip() or str(i + 1))
+        tag = m.group(1).strip()
+        if tag == "画像":
+            label = "画像文言"
+        else:
+            label = "リプ" + (tag[len("リプ"):] or str(i + 1))
         text = body[m.end(): end].strip()
         replies.append((label, text))
     return main, replies
