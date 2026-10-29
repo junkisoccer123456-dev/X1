@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20代のための無料キャリア相談｜ホワイト求人・穴場求人を紹介</title>
+<meta name="description" content="20代限定のホワイト求人・穴場求人を紹介。残業なし・在宅可の求人提案、ホワイト企業一覧のプレゼントまで、すべて0円。無料キャリア相談はこちら。">
+<meta property="og:title" content="20代のための無料キャリア相談">
+<meta property="og:description" content="20代限定のホワイト求人・穴場求人を紹介。すべて0円。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#ff6fae; --pink-soft:#ffe3f0;
+  --violet:#8b6cff; --violet-soft:#ece6ff;
+  --sky:#5cc8ff; --sky-soft:#e1f5ff;
+  --gold:#ffc65c;
+  --ink:#2b2350; --ink-soft:#6a6490;
+  --card:rgba(255,255,255,.78);
+  --grad:linear-gradient(120deg,#ff6fae 0%,#8b6cff 55%,#5cc8ff 100%);
+  --shadow:0 12px 40px rgba(139,108,255,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);line-height:1.8;
+  background:linear-gradient(180deg,#fff5fa 0%,#f1ecff 35%,#e8f7ff 70%,#fff5fa 100%);
+  overflow-x:clip;padding-bottom:84px;
+}
+img,svg{max-width:100%}
+.wrap{width:min(100% - 32px,960px);margin-inline:auto}
+section{padding:72px 0;position:relative;overflow:clip}
+.en{font-family:Poppins,sans-serif;letter-spacing:.18em;font-size:.78rem;font-weight:700;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-align:center;display:block}
+h2{font-size:clamp(1.5rem,5vw,2.1rem);font-weight:900;text-align:center;line-height:1.5;margin:6px 0 36px}
+h2 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(255,111,174,.35) 62%)}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* floating blobs */
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;z-index:0;pointer-events:none}
+.b1{width:320px;height:320px;background:#ffb3d6;top:-60px;left:-80px}
+.b2{width:360px;height:360px;background:#c3b3ff;top:120px;right:-120px}
+.b3{width:280px;height:280px;background:#a8e4ff;bottom:-60px;left:20%}
+.spark{position:absolute;color:#fff;text-shadow:0 0 12px var(--pink),0 0 24px var(--violet);animation:tw 3s ease-in-out infinite;z-index:1;pointer-events:none}
+@keyframes tw{0%,100%{opacity:.25;transform:scale(.7) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(20deg)}}
+
+/* button */
+.btn{
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;
+  padding:18px 40px;border:0;border-radius:999px;cursor:pointer;
+  font:900 1.1rem "Noto Sans JP",sans-serif;color:#fff;text-decoration:none;
+  background:var(--grad);background-size:200% 100%;
+  box-shadow:0 10px 28px rgba(255,111,174,.45);
+  transition:transform .2s,background-position .4s;position:relative;overflow:hidden;
+}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s infinite}
+@keyframes shine{to{transform:translateX(120%)}}
+.btn:hover{transform:translateY(-3px);background-position:100% 0}
+.btn small{display:block;font-weight:500;font-size:.72rem;opacity:.95}
+
+/* hero */
+.hero{padding:28px 0 64px;text-align:center;overflow:hidden;position:relative}
+.brand{font-family:Poppins,sans-serif;font-weight:700;letter-spacing:.1em;font-size:.95rem;text-align:left;position:relative;z-index:2}
+.hero .wrap{position:relative;z-index:2}
+.badge{display:inline-block;margin-top:36px;padding:7px 20px;border-radius:999px;background:#fff;color:var(--pink);font-weight:700;font-size:.85rem;box-shadow:var(--shadow)}
+.hero h1{word-break:keep-all;overflow-wrap:anywhere;font-size:clamp(1.7rem,7.4vw,3.6rem);font-weight:900;line-height:1.35;margin:18px 0 14px}
+.hero h1 .big{font-size:1.18em}
+.hero p.lead{word-break:keep-all;overflow-wrap:anywhere;color:var(--ink-soft);font-size:clamp(.95rem,3.4vw,1.1rem);margin-bottom:28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:34px}
+.chip{background:var(--card);backdrop-filter:blur(8px);border:1px solid #fff;padding:9px 16px;border-radius:999px;font-weight:700;font-size:.88rem;box-shadow:0 6px 18px rgba(139,108,255,.14)}
+.chip b{color:var(--pink)}
+.zero{margin-top:16px;font-size:.85rem;color:var(--ink-soft)}
+.zero b{color:var(--pink);font-size:1.05rem}
+
+/* worries */
+.worry-list{display:grid;gap:14px;max-width:640px;margin:0 auto 34px}
+.worry-list li{list-style:none;background:var(--card);border-radius:18px;padding:16px 20px 16px 54px;position:relative;font-weight:700;box-shadow:0 6px 20px rgba(139,108,255,.1)}
+.worry-list li::before{content:"✓";position:absolute;left:18px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:.85rem}
+.arrow{text-align:center;font-size:1.6rem;color:var(--violet)}
+.answer{text-align:center;font-weight:900;font-size:clamp(1.15rem,4.4vw,1.6rem);margin-top:6px}
+
+/* features */
+.cards{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);backdrop-filter:blur(10px);border:1px solid #fff;border-radius:26px;padding:34px 26px 28px;box-shadow:var(--shadow);position:relative;transition:transform .25s}
+.card:hover{transform:translateY(-6px)}
+.card .no{position:absolute;top:-18px;left:22px;font-family:Poppins,sans-serif;font-weight:700;background:var(--grad);color:#fff;padding:3px 16px;border-radius:999px;font-size:.9rem;box-shadow:0 6px 16px rgba(255,111,174,.4)}
+.card .ico{font-size:2.4rem;margin-bottom:6px}
+.card h3{font-size:1.15rem;font-weight:900;margin-bottom:8px;line-height:1.5}
+.card p{font-size:.92rem;color:var(--ink-soft)}
+
+/* gift */
+.gift{background:linear-gradient(135deg,#fff 0%,var(--pink-soft) 50%,var(--violet-soft) 100%);border-radius:32px;padding:44px 26px;text-align:center;box-shadow:var(--shadow);border:2px solid #fff;position:relative;overflow:hidden}
+.gift .ribbon{display:inline-block;background:var(--gold);color:#7a4a00;font-weight:900;padding:5px 20px;border-radius:999px;font-size:.85rem;margin-bottom:12px}
+.gift h3{font-size:clamp(1.3rem,5vw,1.9rem);font-weight:900;margin-bottom:10px}
+.gift p{color:var(--ink-soft);max-width:560px;margin:0 auto}
+
+/* price */
+.price{text-align:center;background:var(--grad);color:#fff;border-radius:32px;padding:44px 22px;box-shadow:0 18px 44px rgba(139,108,255,.35)}
+.price .yen{font-family:Poppins,sans-serif;font-size:clamp(3.4rem,16vw,6rem);font-weight:700;line-height:1.1}
+.price p{opacity:.95}
+
+/* flow */
+.steps{display:grid;gap:18px;max-width:640px;margin:0 auto}
+.step{display:flex;gap:18px;align-items:center;background:var(--card);border-radius:22px;padding:20px 22px;box-shadow:0 6px 20px rgba(139,108,255,.12)}
+.step .n{flex:none;width:48px;height:48px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:Poppins,sans-serif;font-weight:700;font-size:1.2rem}
+.step h3{font-size:1.02rem;font-weight:900}
+.step p{font-size:.88rem;color:var(--ink-soft);line-height:1.6}
+
+/* faq */
+.faq{max-width:720px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--card);border-radius:18px;padding:0;box-shadow:0 6px 20px rgba(139,108,255,.1);overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:18px 54px 18px 22px;font-weight:700;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q";color:var(--pink);font-family:Poppins,sans-serif;font-weight:700;margin-right:10px}
+summary::after{content:"＋";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--violet)}
+details[open] summary::after{content:"－"}
+details p{padding:0 22px 20px;color:var(--ink-soft);font-size:.92rem}
+
+/* form */
+.formbox{background:var(--card);backdrop-filter:blur(12px);border:2px solid #fff;border-radius:32px;padding:40px 24px;box-shadow:var(--shadow);max-width:680px;margin:0 auto}
+.field{margin-bottom:22px}
+label.lb,.lb{display:block;font-weight:700;margin-bottom:8px;font-size:.95rem}
+.req{display:inline-block;background:var(--pink);color:#fff;font-size:.68rem;padding:1px 9px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.opt{display:inline-block;background:#bdb6dd;color:#fff;font-size:.68rem;padding:1px 9px;border-radius:999px;margin-left:8px;vertical-align:middle}
+input[type=text],select,textarea,input[type=datetime-local],input[type=email],input[type=tel]{
+  width:100%;padding:14px 16px;border:2px solid #e3dcff;border-radius:14px;background:#fff;font:500 1rem "Noto Sans JP",sans-serif;color:var(--ink);transition:border-color .2s,box-shadow .2s;
+}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--violet);box-shadow:0 0 0 4px rgba(139,108,255,.18)}
+.radios{display:flex;flex-wrap:wrap;gap:10px}
+.radios label{position:relative;cursor:pointer}
+.radios input{position:absolute;opacity:0}
+.radios span{display:block;padding:11px 20px;border:2px solid #e3dcff;border-radius:999px;background:#fff;font-weight:700;font-size:.92rem;transition:.2s}
+.radios input:checked+span{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(139,108,255,.35)}
+.radios input:focus-visible+span{outline:3px solid var(--violet);outline-offset:2px}
+.row2{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.hint{font-size:.78rem;color:var(--ink-soft);margin-top:6px}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--ink-soft);margin:6px 0 26px}
+.agree input{margin-top:6px;width:18px;height:18px;accent-color:var(--violet)}
+.submit{text-align:center}
+.submit .btn{width:100%;max-width:420px;font-size:1.15rem}
+.msg{margin-top:18px;padding:14px 18px;border-radius:14px;font-weight:700;display:none;text-align:center}
+.msg.ok{display:block;background:#e5fff1;color:#0a7a45}
+.msg.ng{display:block;background:#ffe9ef;color:#c0204f}
+.sub-note{text-align:center;font-size:.8rem;color:var(--ink-soft);margin-top:14px}
+
+footer{padding:34px 0 20px;text-align:center;font-size:.78rem;color:var(--ink-soft)}
+footer a{color:inherit}
+
+/* sticky cta */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.88);backdrop-filter:blur(12px);box-shadow:0 -6px 24px rgba(139,108,255,.18);display:flex;justify-content:center;transition:transform .3s}
+.sticky.hide{transform:translateY(110%)}
+.sticky .btn{width:100%;max-width:460px;padding:14px 20px;font-size:1rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .spark,.btn::after{animation:none}
+  html{scroll-behavior:auto}
+}
+@media (max-width:480px){
+  section{padding:56px 0}
+  .row2{grid-template-columns:1fr}
+  .btn{padding:16px 28px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <span class="spark" style="top:90px;left:8%;font-size:1.6rem">✦</span>
+  <span class="spark" style="top:180px;right:10%;font-size:1.2rem;animation-delay:1s">✦</span>
+  <span class="spark" style="top:420px;left:14%;font-size:1rem;animation-delay:2s">✦</span>
+  <div class="wrap">
+    <div class="brand grad-text">20s CAREER LAB</div>
+    <span class="badge">20代限定 ｜ 完全無料 ｜ オンライン相談OK</span>
+    <h1>
+      <span class="grad-text big">“ホワイト”</span>な未来は、<br>
+      20代の今から選べる。
+    </h1>
+    <p class="lead">残業なし・在宅OKの求人、世に出にくい穴場求人まで。<br>プロに話すだけで、はたらき方の選択肢がひろがる。</p>
+    <div class="chips">
+      <span class="chip">✨ 20代限定の<b>穴場求人</b></span>
+      <span class="chip">🌙 <b>残業なし</b>の求人</span>
+      <span class="chip">🏡 <b>在宅可</b>の求人</span>
+      <span class="chip">🎁 <b>ホワイト企業一覧</b>プレゼント</span>
+    </div>
+    <a class="btn" href="#apply">無料キャリア相談に申し込む<small>入力 約2分 ／ 相談料0円</small></a>
+    <p class="zero">相談も、求人紹介も、プレゼントも、すべて<b>0円</b></p>
+  </div>
+</header>
+
+<!-- WORRY -->
+<section>
+  <div class="wrap rv">
+    <span class="en">WORRIES</span>
+    <h2>こんなモヤモヤ、<em>ありませんか？</em></h2>
+    <ul class="worry-list">
+      <li>毎日の残業で、プライベートの時間がとれない</li>
+      <li>今の会社に将来性を感じられない</li>
+      <li>転職したいけど、何から始めればいいか分からない</li>
+      <li>ブラック企業を引きたくない。ちゃんと選びたい</li>
+      <li>在宅やフレキシブルな働き方に憧れている</li>
+    </ul>
+    <div class="arrow">▼</div>
+    <p class="answer">その悩み、<span class="grad-text">無料キャリア相談</span>でまるっと解決しよう。</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <div class="blob b3"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="en">FEATURES</span>
+    <h2>無料相談で<em>叶う、3つのこと</em></h2>
+    <div class="cards">
+      <article class="card rv"><span class="no">01</span>
+        <div class="ico">💎</div>
+        <h3>20代限定の<br>ホワイト求人・穴場求人を紹介</h3>
+        <p>20代だからこそ応募できる、限定・穴場の求人をご紹介。自分ひとりでは出会えない選択肢が見つかります。</p>
+      </article>
+      <article class="card rv"><span class="no">02</span>
+        <div class="ico">🌈</div>
+        <h3>残業なし・在宅可の<br>はたらき方を提案</h3>
+        <p>あなたの希望に合わせて、無理なく長く働ける、残業少なめ・在宅可の求人を一緒に探します。</p>
+      </article>
+      <article class="card rv"><span class="no">03</span>
+        <div class="ico">🎁</div>
+        <h3>ホワイト企業一覧を<br>プレゼント</h3>
+        <p>企業選びの軸になる「ホワイト企業一覧」を、ご相談いただいた方にプレゼントします。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- GIFT -->
+<section style="padding-top:20px">
+  <div class="wrap rv">
+    <div class="gift">
+      <span class="spark" style="top:16px;left:22px;font-size:1.3rem;color:var(--pink)">✦</span>
+      <span class="spark" style="bottom:20px;right:26px;font-size:1.5rem;color:var(--violet);animation-delay:1.4s">✦</span>
+      <span class="ribbon">🎁 相談者さま限定プレゼント</span>
+      <h3>ホワイト企業一覧</h3>
+      <p>転職活動で迷わないための「ホワイト企業一覧」をプレゼント。<br>まずは相談するだけで受け取れます。</p>
+      <div style="margin-top:26px"><a class="btn" href="#apply">プレゼントを受け取る</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section style="padding-top:20px">
+  <div class="wrap rv">
+    <div class="price">
+      <p>キャリア相談 ＋ 求人紹介 ＋ ホワイト企業一覧</p>
+      <div class="yen">0<span style="font-size:.4em">円</span></div>
+      <p>すべて無料で、ご利用いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section>
+  <div class="wrap rv">
+    <span class="en">FLOW</span>
+    <h2>ご利用は<em>かんたん3ステップ</em></h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h3>フォームから申し込み</h3><p>お名前や希望などを入力。所要時間は約2分です。</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>日程を調整</h3><p>ご希望の日時をもとに、相談日をご連絡します。</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>無料キャリア相談</h3><p>あなたに合う求人を提案。ホワイト企業一覧もお渡しします。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap rv">
+    <span class="en">FAQ</span>
+    <h2>よくある<em>ご質問</em></h2>
+    <div class="faq">
+      <details><summary>本当に無料ですか？</summary><p>はい。キャリア相談・求人のご紹介・ホワイト企業一覧のプレゼントまで、料金は一切かかりません。</p></details>
+      <details><summary>転職経験がなくても相談できますか？</summary><p>もちろんです。「転職するか迷っている」「情報収集だけしたい」という段階でも大歓迎です。</p></details>
+      <details><summary>相談したら、必ず転職しないといけませんか？</summary><p>いいえ。相談だけでもOKです。無理に転職をおすすめすることはありません。</p></details>
+      <details><summary>どこに住んでいても相談できますか？</summary><p>オンラインでの相談に対応しています。希望の勤務地も、フォームでお伝えください。</p></details>
+      <details><summary>今の会社に知られることはありますか？</summary><p>ご相談内容を勤務先にお伝えすることはありません。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="apply">
+  <div class="blob b1" style="top:auto;bottom:0"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="en">APPLY</span>
+    <h2>無料キャリア相談の<br><em>お申し込み</em></h2>
+    <form class="formbox rv" id="form" novalidate>
+      <!-- スパム対策（人間には見えない） -->
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+
+      <div class="field">
+        <label class="lb" for="name">お名前<span class="req">必須</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" placeholder="例）山田 花子" required>
+      </div>
+
+      <div class="field">
+        <label class="lb" for="age">年齢<span class="req">必須</span></label>
+        <select id="age" name="age" required>
+          <option value="">選択してください</option>
+          <option>20歳</option><option>21歳</option><option>22歳</option><option>23歳</option><option>24歳</option>
+          <option>25歳</option><option>26歳</option><option>27歳</option><option>28歳</option><option>29歳</option>
+          <option>その他（20代以外）</option>
+        </select>
+        <p class="hint">※ 20代の方が対象です</p>
+      </div>
+
+      <div class="field">
+        <span class="lb">性別<span class="req">必須</span></span>
+        <div class="radios">
+          <label><input type="radio" name="gender" value="女性" required><span>女性</span></label>
+          <label><input type="radio" name="gender" value="男性"><span>男性</span></label>
+          <label><input type="radio" name="gender" value="その他・回答しない"><span>その他・回答しない</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="lb">転職経験<span class="req">必須</span></span>
+        <div class="radios">
+          <label><input type="radio" name="experience" value="なし" required><span>なし</span></label>
+          <label><input type="radio" name="experience" value="1回"><span>1回</span></label>
+          <label><input type="radio" name="experience" value="2回以上"><span>2回以上</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="lb" for="pref">転職希望の都道府県<span class="req">必須</span></label>
+        <select id="pref" name="prefecture" required><option value="">選択してください</option></select>
+      </div>
+
+      <div class="field">
+        <label class="lb" for="timing">いつ頃転職したいですか？<span class="req">必須</span></label>
+        <select id="timing" name="timing" required>
+          <option value="">選択してください</option>
+          <option>できるだけ早く</option>
+          <option>1か月以内</option>
+          <option>3か月以内</option>
+          <option>半年以内</option>
+          <option>1年以内</option>
+          <option>未定（情報収集中）</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="lb" for="trouble">現在の不満・困っていること<span class="req">必須</span></label>
+        <textarea id="trouble" name="trouble" placeholder="例）残業が多くて休めない／在宅勤務がしたい／将来が不安 など" required></textarea>
+      </div>
+
+      <div class="field">
+        <span class="lb">無料キャリア相談の希望日程<span class="req">必須</span></span>
+        <div class="row2">
+          <div>
+            <input type="datetime-local" id="d1" name="date1" aria-label="第1希望" required>
+            <p class="hint">第1希望</p>
+          </div>
+          <div>
+            <input type="datetime-local" id="d2" name="date2" aria-label="第2希望">
+            <p class="hint">第2希望（任意）</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="lb" for="contact">ご連絡先（メール or 電話）<span class="req">必須</span></label>
+        <input type="text" id="contact" name="contact" autocomplete="email" placeholder="例）example@mail.com" required>
+        <p class="hint">日程のご連絡に使用します。</p>
+      </div>
+
+      <label class="agree">
+        <input type="checkbox" id="agree" required>
+        <span>入力内容は、キャリア相談のご案内・求人紹介の目的でのみ利用することに同意します。</span>
+      </label>
+
+      <div class="submit">
+        <button class="btn" type="submit" id="send">無料キャリア相談に申し込む<small>相談料0円 ／ しつこい勧誘なし</small></button>
+        <div class="msg" id="msg" role="status" aria-live="polite"></div>
+      </div>
+      <p class="sub-note">🔒 入力内容は暗号化通信で送信されます</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 20s CAREER LAB ／ <a href="#">プライバシーポリシー</a></div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a class="btn" href="#apply">✨ 無料キャリア相談に申し込む</a>
+</div>
+
+<script>
+/* ============================================================
+   ★ 公開前に必ず設定してください ★
+   フォームの送信先URL（Googleフォーム連携 / Formspree / GAS など）
+   例: "https://formspree.io/f/xxxxxxxx"
+   ============================================================ */
+const ENDPOINT = "";
+
+// 都道府県
+const prefs = "北海道,青森県,岩手県,宮城県,秋田県,山形県,福島県,茨城県,栃木県,群馬県,埼玉県,千葉県,東京都,神奈川県,新潟県,富山県,石川県,福井県,山梨県,長野県,岐阜県,静岡県,愛知県,三重県,滋賀県,京都府,大阪府,兵庫県,奈良県,和歌山県,鳥取県,島根県,岡山県,広島県,山口県,徳島県,香川県,愛媛県,高知県,福岡県,佐賀県,長崎県,熊本県,大分県,宮崎県,鹿児島県,沖縄県,全国どこでも・リモート希望".split(",");
+const sel = document.getElementById("pref");
+prefs.forEach(p => sel.add(new Option(p, p)));
+
+// 日程の最小値＝現在
+const now = new Date(Date.now() - new Date().getTimezoneOffset()*60000).toISOString().slice(0,16);
+document.getElementById("d1").min = now;
+document.getElementById("d2").min = now;
+
+// スクロール演出
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+
+// フォーム表示中は固定ボタンを隠す
+const sticky = document.getElementById("sticky");
+new IntersectionObserver(es => sticky.classList.toggle("hide", es[0].isIntersecting), {threshold:.05})
+  .observe(document.getElementById("apply"));
+
+// 送信
+const form = document.getElementById("form");
+const msg = document.getElementById("msg");
+const btn = document.getElementById("send");
+function show(type, text){ msg.className = "msg " + type; msg.textContent = text; }
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  if(form.querySelector('[name="_gotcha"]').value) return; // bot
+  if(!form.reportValidity()) return;
+  if(!document.getElementById("agree").checked){ show("ng","同意にチェックを入れてください。"); return; }
+  if(!ENDPOINT){ show("ng","【管理者向け】送信先(ENDPOINT)が未設定です。index.html内の ENDPOINT を設定してください。"); return; }
+
+  btn.disabled = true; show("ok","送信中…");
+  try{
+    const res = await fetch(ENDPOINT, {
+      method:"POST",
+      headers:{ "Accept":"application/json" },
+      body:new FormData(form)
+    });
+    if(!res.ok) throw new Error(res.status);
+    form.reset();
+    show("ok","お申し込みありがとうございます！日程のご連絡をお待ちください ✨");
+  }catch(err){
+    show("ng","送信に失敗しました。時間をおいて再度お試しください。");
+  }finally{
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
